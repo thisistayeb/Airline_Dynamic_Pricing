@@ -51,7 +51,7 @@ class Ticket:
     def update_index(self):
         self.index = [
             self.active_prices[i]
-            * ((self.customers * (min(1, self.sp[i]) + r_t(self.nt[i], self.sp[i]))))
+            * ((self.customers * (min(1, self.sp[i]) + r_t(self.nt[i], self.sp[i],self.customers))))
             for i in range(len(self.active_prices))
         ]
 

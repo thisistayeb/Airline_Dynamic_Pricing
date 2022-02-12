@@ -96,7 +96,7 @@ class Bundle():
 
             # Update Index
             self.index[flight] = [self.active_prices[flight][i] * self.customers * (
-                        min(1, self.sp[flight][i]) + r_t(self.nt[flight][i], self.sp[flight][i])) for i in
+                        min(1, self.sp[flight][i]) + r_t(self.nt[flight][i], self.sp[flight][i],self.customers)) for i in
                                   range(len(self.active_prices[flight]))]
 
     def sold(self):
